@@ -1,0 +1,14 @@
+.swiper-button-next:after, 
+.swiper-button-prev:after {
+    color: #eee !important;
+    font-size: 30px !important;
+}
+
+.slide-text {
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide-text.active {
+    transform: translateX(100%);
+  }
+  
