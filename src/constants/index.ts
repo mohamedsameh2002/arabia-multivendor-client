@@ -21,3 +21,9 @@ export const headerLinks = [
     },
 ];
 
+
+export const footerLinks=[
+{
+
+},
+]

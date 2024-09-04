@@ -8,7 +8,8 @@ export default {
     extend: {
       fontFamily: {
         Almarai: ["Almarai", 'sans-serif'],
-        Reem: ["Reem Kufi", 'sans-serif']
+        Reem: ["Reem Kufi", 'sans-serif'],
+        Poppins: ["Poppins", 'sans-serif'],
       },
       colors:{
           "Red":"#ff0000",

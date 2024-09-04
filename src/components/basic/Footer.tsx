@@ -1,42 +1,64 @@
-import React from "react";
-import ItemsContainer from "./ItemsContainer";
-import SocialIcons from "./SocialIcons";
-import { Icons } from "./Menus";
+import { Link } from "react-router-dom";
+import {  FaFacebookSquare, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
+
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="md:flex md:justify-between md:items-center sm:px-12 px-4 bg-[#ffffff19] py-7">
-        <h1
-          className="lg:text-4xl text-3xl md:mb-0 mb-6 lg:leading-normal font-semibold
-         md:w-2/5"
-        >
-          <span className="text-Red">Free</span> until you're ready to
-          launch
-        </h1>
-        <div>
-          <input
-            type="text"
-            placeholder="Enter Your ph.no"
-            className="text-gray-800
-           sm:w-72 w-full sm:mr-5 mr-1 lg:mb-0 mb-4 py-2.5 rounded px-2 focus:outline-none"
-          />
-          <button
-            className="bg-Red hover:bg-white hover:text-Red duration-300 px-5 py-2.5 font-[Poppins]
-           rounded-md text-white md:w-auto w-full"
-          >
-            Request Code
-          </button>
+    <footer className="w-full flex flex-col mt-14">
+      <div className="flexCenter w-full  flex-col">
+        <div className="flexCenter gap-3 flex-col">
+          <img className=" w-24 -mb-8" src="./assets/icons/4895665.png" alt="logo" />
+          <h2 className="text-2xl max-md:text-xl text-blackText font-bold">تواصل معنا</h2>
+          <div className="flexCenter mt-2 gap-3">
+            <Link to={''} className=" border-2 border-gray-400 p-1 rounded-full">
+              <div className=" p-1 rounded-full text-2xl max-md:text-xl text-black">
+                <FaFacebookSquare ></FaFacebookSquare>
+              </div>
+            </Link>
+            <Link to={''} className=" border-2 border-gray-400 p-1 rounded-full">
+              <div className=" p-1 rounded-full text-2xl max-md:text-xl text-black">
+                <FaInstagram  ></FaInstagram>
+              </div>
+            </Link>
+            <Link to={''} className=" border-2 border-gray-400 p-1 rounded-full">
+              <div className=" p-1 rounded-full text-2xl max-md:text-xl text-black">
+                <FaWhatsapp  ></FaWhatsapp>
+              </div>
+            </Link>
+            <Link to={''} className=" border-2 border-gray-400 p-1 rounded-full">
+              <div className=" p-1 rounded-full text-2xl max-md:text-xl text-black">
+                <FaLinkedin  ></FaLinkedin>
+              </div>
+            </Link>
+          </div>
+
+          <div className="text-sm text-gray-500">
+            © 2024 اربيا. جميع الحقوق محفوظة
+          </div>
         </div>
       </div>
-      <ItemsContainer />
-      <div
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10
-      text-center pt-2 text-gray-400 text-sm pb-8"
-      >
-        <span>© 2020 Appy. All rights reserved.</span>
-        <span>Terms · Privacy Policy</span>
-        <SocialIcons Icons={Icons} />
+
+      <div className="flexBetween px-6 bg-stone-200 h-12 max-md:gap-3 max-md:h-fit py-2  max-md:flex-col mt-4 w-full">
+        <div className="flex ">
+          <img className="w-20 h-12" src="./assets/icons/instapay.png" alt="" />
+          <img className="w-9 h-12" src="./assets/icons/card-mastercard.svg" alt="" />
+          <img className="w-9 h-12" src="./assets/icons/cod-en.svg" alt="" />
+          <img className="w-9 h-12" src="./assets/icons/card-visa.svg" alt="" />
+        </div>
+        <ul className="flex gap-5">
+          <li>
+            <Link to={''} className="text-xs text-gray-600">سياسة الخصوصية</Link>
+          </li>
+          <li>
+            <Link to={''} className="text-xs text-gray-600">شروط الاستخدام</Link>
+          </li>
+          <li>
+            <Link to={''} className="text-xs text-gray-600">شروط البيع </Link>
+          </li>
+          <li>
+            <Link to={''} className="text-xs text-gray-600">كُن بائع معنا</Link>
+          </li>
+        </ul>
       </div>
     </footer>
   );
